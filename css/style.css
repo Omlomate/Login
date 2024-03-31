@@ -1,0 +1,155 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #2A454E; 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+
+p {
+  color: #b3b3b3;
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto", sans-serif; }
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a:hover {
+    text-decoration: none !important; }
+
+.content {
+  padding: 11rem 0; 
+  background-color: #2A454E ;
+}
+
+h2 {
+  font-size: 20px; }
+
+@media (max-width: 991.98px) {
+  .content .bg {
+    height: 500px; } }
+
+.content .contents, .content .bg {
+  width: 50%; }
+  @media (max-width: 1199.98px) {
+    .content .contents, .content .bg {
+      width: 100%; } }
+  .content .contents .form-group, .content .bg .form-group {
+    overflow: hidden;
+    margin-bottom: 0;
+    padding: 15px 15px;
+    border-bottom: none;
+    position: relative;
+    background: #ffff;
+    border-bottom: 1px solid #e6edf1; }
+    .content .contents .form-group label, .content .bg .form-group label {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease; }
+    .content .contents .form-group input, .content .bg .form-group input {
+      background: transparent; }
+    .content .contents .form-group.first, .content .bg .form-group.first {
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px; }
+    .content .contents .form-group.last, .content .bg .form-group.last {
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px; }
+    .content .contents .form-group label, .content .bg .form-group label {
+      font-size: 12px;
+      display: block;
+      margin-bottom: 0;
+      color: #b3b3b3; }
+    .content .contents .form-group.focus, .content .bg .form-group.focus {
+      background: #ffff; }
+    .content .contents .form-group.field--not-empty label, .content .bg .form-group.field--not-empty label {
+      margin-top: -20px; }
+  .content .contents .form-control, .content .bg .form-control {
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    border-radius: 0; }
+    .content .contents .form-control:active, .content .contents .form-control:focus, .content .bg .form-control:active, .content .bg .form-control:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; 
+    }
+
+
+.content .btn {
+  height: 54px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+
+
+.button {
+    background-color: #44EFD5; /* Default button background color */
+    color: #000000; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
+
+    /* Other button styles */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2A454E; /* Button background color on hover */
+    color: #ffff; /* Text color on hover */
+}
+
+  
+.container {
+  max-width: 850px; /* Adjust the width as needed */
+  border-radius: 10px; /* Adjust border radius as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Adjust shadow properties as needed */
+}
+
+.contents h3 {
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.content .contents .form-control,
+.content .bg .form-control {
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-family: "Roboto", sans-serif; /* Specify the desired font-family */
+}
+
+.content .contents .form-control:focus,
+.content .bg .form-control:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Define a CSS animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in animation to all items */
+.content * {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
