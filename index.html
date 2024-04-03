@@ -1,99 +1,219 @@
-<!Doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-    <title>Login</title>
-  </head>
-  <body>
-  
-
-  
-  <div class="content">
-    <div class="container" style="background-color: #FFFFFF;"> 
-      <div class="row">
-        <div class="col-md-6">
-          <img src="./6184159_3094352.jpg" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-md-6 contents">
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="mb-4">
-                <h3 class="login-heading"><i class="fas fa-sign-in-alt"></i> Login</h3>
-              <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
-            </div>
-            <form action="#">
-              <div class="form-group first">
-                <label for="username"></label>
-                <input placeholder="Username" type="text" class="form-control" id="username">
-
-              </div>
-              <div class="form-group last mb-4">
-                <label for="password"></label>
-                <input placeholder="Password" type="password" class="form-control" id="password">
-                
-              </div>
-              
-              <!-- <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                  <input type="checkbox" checked="checked"/>
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
-              </div> -->
-
-              <input type="submit" value="Log In" class="btn btn-block btn-primary button "/>
-
-              <!-- <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span> -->
-<!--               
-              <div class="social-login">
-                <a href="#" class="facebook">
-                  <span class="icon-facebook mr-3"></span> 
-                </a>
-                <a href="#" class="twitter">
-                  <span class="icon-twitter mr-3"></span> 
-                </a>
-                <a href="#" class="google">
-                  <span class="icon-google mr-3"></span> 
-                </a>
-              </div> -->
-            </form>
-            </div>
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-  
-    <!-- <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script> -->
-  </body>
-</html>
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank Page</title>
+    <style>
+        body {
+            background-color: #aadfff; /* Set background color to aadfff */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 750px;
+            height: 500px;
+            background-color: white; /* Set container background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for visual effect */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0; /* Remove padding */
+            border-radius: 25px; /* Round corners of main container with 20px */
+            overflow: hidden; /* Hide any content overflowing the rounded corners */
+            opacity: 0; /* Set initial opacity to 0 for animation */
+            animation: fade-in 1s ease forwards; /* Apply fade-in animation */
+        }
+
+        .container1 {
+            flex: 0 0 70%; /* Set container1 to occupy 70% of the available space */
+            height: 100%; /* Make container1 full height of the main container */
+            background-color: white; /* Set container1 background color to white */
+            overflow: hidden; /* Ensure the image doesn't overflow the container */
+            position: relative; /* Position the image inside the container */
+        }
+
+        .container1 img {
+            width: 100%; /* Make the image fill the entire container */
+            height: 100%; /* Make the image fill the entire container */
+            object-fit: cover; /* Cover the entire container */
+            position: absolute; /* Position the image absolutely */
+            top: 0; /* Position the image at the top */
+            left: 0; /* Position the image at the left */
+            transition: transform 0.5s ease; /* Add transition for smooth image change */
+        }
+
+        .container1 img.flipped {
+            transform: rotateY(180deg); /* Apply rotation when changing images */
+        }
+
+        .container2 {
+            flex: 1; /* Allow container2 to occupy remaining space */
+            height: 100%; /* Make container2 full height of the main container */
+            background-color: white; /* Set container2 background color to blue */
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            padding: 20px; /* Add padding to the login form */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            color: white; /* Set text color to white */
+            flex-direction: column; /* Align items in a column */
+            opacity: 0; /* Set initial opacity to 0 for animation */
+            animation: slide-in 1s ease forwards; /* Apply slide-in animation */
+        }
+
+        .login-form {
+            max-width: 300px; /* Set maximum width for the form */
+            text-align: center; /* Center align the content */
+        }
+
+        .login-form img {
+            width: 100px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Add some space below the image */
+            animation: slide-in 1s ease forwards; /* Apply slide-in animation */
+            opacity: 0; /* Set initial opacity to 0 for animation */
+        }
+
+        .login-form input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 2px solid #aadfff;
+            position: relative; /* Position relative for pseudo-elements */
+            background-color: #fff; /* Set background color for input fields */
+            color: #333; /* Set text color for input fields */
+            outline: none; /* Remove outline */
+            transition: border-color 0.5s ease; /* Add transition effect for smooth color change */
+            text-align: center; /* Center align placeholder text */
+            opacity: 0; /* Set initial opacity to 0 for animation */
+            animation: slide-in 1s ease forwards; /* Apply slide-in animation */
+            animation-delay: 0.5s; /* Add delay for input fields */
+        }
+
+        .login-form input:focus {
+            border-bottom: 2px solid #5896fb; /* Change bottom border color on focus */
+        }
+
+        .login-form input::before,
+        .login-form input::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #5896fb;
+            bottom: -1px;
+            transition: width 0.5s ease;
+        }
+
+        .login-form input::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .login-form input::after {
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+        .login-form input:focus::before,
+        .login-form input:focus::after {
+            width: 50%;
+        }
+
+        .login-form button {
+            width: 50%;
+            padding: 10px;
+            margin-top: 15px; /* Add margin to the top */
+            border-radius: 25px;
+            border: none;
+            background-color: #5896fb; /* Set background color for the button */
+            color: white; /* Set text color for the button */
+            cursor: pointer;
+            transition: background-color 0.5s ease; /* Add transition effect for smooth color change */
+            opacity: 0; /* Set initial opacity to 0 for animation */
+            animation: slide-in 1s ease forwards; /* Apply slide-in animation */
+            animation-delay: 1s; /* Add delay for button */
+        }
+
+        .login-form button:hover {
+            background-color: #ea7a00; /* Change background color on hover */
+            color: white; /* Change text color on hover */
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-  
+    <div class="container">
+        <div class="container1">
+            <img src="Data_security_05.jpg" alt="Image"> <!-- Add image inside container1 -->
+        </div>
+        <div class="container2">
+            <div class="login-form">
+                <form action="#" method="post">
+                    <img src="locked.png" alt="Login Icon"> <!-- Your PNG image -->
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Listen for input focus events
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', function() {
+                var imgSrc = '';
+                if (input.type === 'text') {
+                    imgSrc = 'login.png'; // Change image source to login.png when username input is focused
+                } else if (input.type === 'password') {
+                    imgSrc = 'key.png'; // Change image source to key.png when password input is focused
+                }
+                var img = document.querySelector('.login-form img');
+                img.classList.add('flipped'); // Add class for rotation
+                setTimeout(function() {
+                    img.src = imgSrc; // Update image source after rotation animation
+                }, 250); // Adjust timing according to the rotation animation
+            });
+        });
+
+        // Listen for input blur events
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('blur', function() {
+                var img = document.querySelector('.login-form img');
+                img.classList.remove('flipped'); // Remove class for rotation
+                setTimeout(function() {
+                    img.src = 'locked.png'; // Change image source to locked.png when inputs lose focus
+                }, 250); // Adjust timing according to the rotation animation
+            });
+        });
+    </script>
 </body>
-</html> -->
+</html>
